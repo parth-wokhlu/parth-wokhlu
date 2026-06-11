@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -117,12 +118,49 @@
       text-decoration: underline;
     }
 
-    .gallery-placeholder {
+    .slideshow {
       margin-top: 16px;
-      padding: 18px;
-      border: 1px dashed #ccc;
-      color: #666;
+    }
+
+    .slide {
+      display: none;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    .slide img {
+      width: 100%;
+      max-height: 520px;
+      object-fit: contain;
+      border-radius: 6px;
+      background: #eee;
+    }
+
+    .caption {
+      margin-top: 8px;
+      color: #555;
       font-size: 0.95rem;
+    }
+
+    .slideshow-controls {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .slideshow-controls button {
+      border: 1px solid #ccc;
+      background: #fff;
+      padding: 6px 10px;
+      cursor: pointer;
+      font: inherit;
+      border-radius: 4px;
+    }
+
+    .slideshow-controls button:hover {
+      background: #f0f0f0;
     }
 
     footer {
@@ -152,7 +190,6 @@
       <a href="index.html">Parth Wokhlu</a>
       <a href="#papers">Papers</a>
       <a href="#for-fun">For fun</a>
-      <a href="resume.pdf">CV</a>
     </nav>
 
     <header class="intro">
@@ -181,8 +218,8 @@
       <p>
         I recently graduated from the University of Chicago with a B.S. in Mathematics.
         I'm currently interested in low-dimensional topology, representation theory,
-        and research engineering. In my free time, I enjoy making clothes, electronics
-        projects, and reading.
+        and making software tools for research. In my free time, I enjoy making clothes,
+        electronics projects, and reading.
       </p>
     </section>
 
@@ -196,7 +233,27 @@
           Amy Somers, David Stephens, and Parth Wokhlu. In preparation.
         </p>
 
-       <details> <summary>Abstract</summary> <p> We study webs on surfaces for the PGL<sub>2</sub> and SL<sub>2</sub> skein theories specialized at roots of unity. We construct the PGL<sub>2</sub> analogue of Chebyshev polynomials and use them to construct central elements in the skein algebra. </p> <p> We then focus on the cases of the 3-punctured sphere and the closed torus. We compute the Frobenius homomorphism for these two surfaces and show that the PGL<sub>2</sub> Frobenius homomorphism for the torus is not injective when q<sup>2</sup> is a root of unity of order n with n even. </p> <p> We give a conjectural formula for the Frobenius image of a particular case of a theta web on the 3-punctured sphere, and verify the formula for all roots of unity q<sup>2</sup> of order n &lt; 6. </p> </details>
+        <details>
+          <summary>Abstract</summary>
+          <p>
+            We study webs on surfaces for the PGL<sub>2</sub> and SL<sub>2</sub>
+            skein theories specialized at roots of unity. We construct the
+            PGL<sub>2</sub> analogue of Chebyshev polynomials and use them to
+            construct central elements in the skein algebra.
+          </p>
+          <p>
+            We then focus on the cases of the 3-punctured sphere and the closed
+            torus. We compute the Frobenius homomorphism for these two surfaces
+            and show that the PGL<sub>2</sub> Frobenius homomorphism for the torus
+            is not injective when q<sup>2</sup> is a root of unity of order n with
+            n even.
+          </p>
+          <p>
+            We give a conjectural formula for the Frobenius image of a particular
+            case of a theta web on the 3-punctured sphere, and verify the formula
+            for all roots of unity q<sup>2</sup> of order n &lt; 6.
+          </p>
+        </details>
       </article>
 
       <article class="paper">
@@ -260,8 +317,37 @@
       </ul>
 
       <h3>Things I have made</h3>
-      <div class="gallery-placeholder">
-        Photo gallery coming soon.
+
+      <div class="slideshow">
+        <div class="slide active">
+          <img src="slide1.jpg" alt="Thing I made, slide 1">
+          <p class="caption">Caption for slide 1.</p>
+        </div>
+
+        <div class="slide">
+          <img src="slide2.jpg" alt="Thing I made, slide 2">
+          <p class="caption">Caption for slide 2.</p>
+        </div>
+
+        <div class="slide">
+          <img src="slide3.jpg" alt="Thing I made, slide 3">
+          <p class="caption">Caption for slide 3.</p>
+        </div>
+
+        <div class="slide">
+          <img src="slide4.jpg" alt="Thing I made, slide 4">
+          <p class="caption">Caption for slide 4.</p>
+        </div>
+
+        <div class="slide">
+          <img src="slide5.jpg" alt="Thing I made, slide 5">
+          <p class="caption">Caption for slide 5.</p>
+        </div>
+
+        <div class="slideshow-controls">
+          <button type="button" onclick="changeSlide(-1)">Previous</button>
+          <button type="button" onclick="changeSlide(1)">Next</button>
+        </div>
       </div>
     </section>
 
@@ -269,6 +355,21 @@
       <p>Last updated June 2026</p>
     </footer>
   </main>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlide(index) {
+      slides[currentSlide].classList.remove("active");
+      currentSlide = (index + slides.length) % slides.length;
+      slides[currentSlide].classList.add("active");
+    }
+
+    function changeSlide(direction) {
+      showSlide(currentSlide + direction);
+    }
+  </script>
 </body>
 </html>
 ```
