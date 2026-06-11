@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -129,25 +130,42 @@
       display: none;
     }
 
-    .slide img {
-  max-width: 420px;
-  max-height: 520px;
-  width: auto;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border: none;
-  object-fit: contain;
-}
-
     .slide.active {
       display: block;
+    }
+
+    .slide figure {
+      max-width: 460px;
+      margin: 0 auto;
+      padding: 14px;
+      border: 1px solid #ccc;
+      background: #fff;
+      text-align: center;
+    }
+
+    .slide img {
+      max-width: 420px;
+      max-height: 520px;
+      width: auto;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border: none;
+      object-fit: contain;
+    }
+
+    .slide figcaption {
+      margin-top: 10px;
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.4;
     }
 
     .slideshow-controls {
       display: flex;
       justify-content: space-between;
-      margin-top: 10px;
+      max-width: 460px;
+      margin: 10px auto 0 auto;
     }
 
     .slideshow-controls button {
@@ -179,6 +197,14 @@
 
       nav {
         flex-wrap: wrap;
+      }
+
+      .slide figure {
+        max-width: 100%;
+      }
+
+      .slide img {
+        max-width: 100%;
       }
     }
   </style>
@@ -238,16 +264,10 @@
             We study webs on surfaces for the PGL<sub>2</sub> and SL<sub>2</sub> skein
             theories specialized at roots of unity. We construct the PGL<sub>2</sub>
             analogue of Chebyshev polynomials and use them to construct central elements
-            in the skein algebra.
-          </p>
-          <p>
-            We then focus on the cases of the 3-punctured sphere and the closed torus.
+            in the skein algebra. We then focus on the cases of the 3-punctured sphere and the closed torus.
             We compute the Frobenius homomorphism for these two surfaces and show that
             the PGL<sub>2</sub> Frobenius homomorphism for the torus is not injective
-            when q<sup>2</sup> is a root of unity of order n with n even.
-          </p>
-          <p>
-            We give a conjectural formula for the Frobenius image of a particular case
+            when q<sup>2</sup> is a root of unity of order n with n even. We give a conjectural formula for the Frobenius image of a particular case
             of a theta web on the 3-punctured sphere, and verify the formula for all
             roots of unity q<sup>2</sup> of order n &lt; 6.
           </p>
@@ -318,22 +338,45 @@
 
       <div class="slideshow">
         <div class="slide active">
-          <img src="slide1.jpg" alt="South Asian x Wild West, MODA 2024. Modeled by Valentina de Pablo and Akaash Babu" />
+          <figure>
+            <img src="slide3.jpg" alt="The Sound of Clothes, MODA 2023. Modeled by Yasmine Baldo, Yasmin Ali, and Keshav Narendra-Babu" />
+            <figcaption>The Sound of Clothes, MODA 2023. Modeled by Yasmine Baldo, Yasmin Ali, and Keshav Narendra-Babu.</figcaption>
+          </figure>
         </div>
+
         <div class="slide">
-          <img src="slide2.jpg" alt="Rubber-band car, all-time class record. Made with Vera Chaudhry" />
+          <figure>
+            <img src="slide2.jpg" alt="Rubber-band car, all-time class record. Made with Vera Chaudhry" />
+            <figcaption>Rubber-band car, all-time class record. Made with Vera Chaudhry.</figcaption>
+          </figure>
         </div>
+
         <div class="slide">
-          <img src="slide3.jpg" alt="The Sound of Clothes, MODA 2023. Modeled by Yasmine Baldo, Yasmin Ali, and Keshav Narendra-Babu" />
+          <figure>
+            <img src="slide1.jpg" alt="South Asian x Wild West, MODA 2024. Modeled by Valentina de Pablo and Akaash Babu" />
+            <figcaption>South Asian x Wild West, MODA 2024. Modeled by Valentina de Pablo and Akaash Babu.</figcaption>
+          </figure>
         </div>
+
         <div class="slide">
-          <img src="slide4.jpg" alt="Maze-solving robot. Made with Vera Chaudhry" />
+          <figure>
+            <img src="slide4.jpg" alt="Maze-solving robot. Made with Vera Chaudhry" />
+            <figcaption>Maze-solving robot. Made with Vera Chaudhry.</figcaption>
+          </figure>
         </div>
+
         <div class="slide">
-          <img src="slide5.jpg" alt="Clothes in the wrong places, MODA 2025. Modeled by Jacqueline Oury" />
+          <figure>
+            <img src="slide5.jpg" alt="Clothes in the wrong places, MODA 2025. Modeled by Jacqueline Oury" />
+            <figcaption>Clothes in the wrong places, MODA 2025. Modeled by Jacqueline Oury.</figcaption>
+          </figure>
         </div>
+
         <div class="slide">
-          <img src="slide6.jpg" alt="I made the best friends at UChicago!" />
+          <figure>
+            <img src="slide6.jpg" alt="I made the best friends at UChicago!" />
+            <figcaption>I made the best friends at UChicago!</figcaption>
+          </figure>
         </div>
 
         <div class="slideshow-controls">
