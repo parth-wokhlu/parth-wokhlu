@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,23 +16,70 @@
 
     main {
       max-width: 760px;
-      margin: 60px auto;
+      margin: 40px auto;
       padding: 0 24px;
     }
 
+    nav {
+      display: flex;
+      gap: 18px;
+      margin-bottom: 48px;
+      font-size: 0.95rem;
+    }
+
+    nav a {
+      color: #111;
+    }
+
+    .intro {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      margin-bottom: 36px;
+    }
+
+    .profile-photo {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.25rem;
+      font-size: 2rem;
+      margin: 0 0 4px 0;
+    }
+
+    .subtitle {
+      margin: 0 0 12px 0;
+      color: #444;
+    }
+
+    .profile-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      color: #444;
     }
 
     h2 {
-      margin-top: 40px;
+      font-size: 1.2rem;
+      margin-top: 36px;
       border-bottom: 1px solid #ddd;
-      padding-bottom: 6px;
+      padding-bottom: 4px;
     }
 
     article {
       margin: 24px 0;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 8px;
     }
 
     a {
@@ -42,25 +90,83 @@
     a:hover {
       text-decoration: underline;
     }
+
+    footer {
+      margin-top: 48px;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .intro {
+        display: block;
+      }
+
+      .profile-photo {
+        margin-bottom: 20px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+      }
+    }
   </style>
 </head>
 <body>
   <main>
-    <header>
-      <h1>Parth Wokhlu</h1>
-      <p>
-        Mathematics student at the University of Chicago interested in research engineering,
-        scientific computing, machine learning, and mathematical software.
-      </p>
-      <p>
-        <a href="mailto:parthw04@gmail.com">Email</a> ·
-        <a href="https://github.com/parthw04">GitHub</a> ·
-        <a href="#">Resume</a>
-      </p>
+    <nav>
+      <a href="index.html">Parth Wokhlu</a>
+      <a href="#projects">Projects</a>
+      <a href="#writing">Writing</a>
+      <a href="resume.pdf">CV</a>
+    </nav>
+
+    <header class="intro">
+      <img src="profile.jpg" alt="Photo of Parth Wokhlu" class="profile-photo" />
+
+      <div>
+        <h1>Parth Wokhlu</h1>
+        <p class="subtitle">
+          Mathematics student at the University of Chicago
+        </p>
+
+        <ul class="profile-links">
+          <li>Chicago, Illinois</li>
+          <li>University of Chicago</li>
+          <li><a href="mailto:parthw04@gmail.com">Email</a></li>
+          <li><a href="https://github.com/parth-wokhlu">GitHub</a></li>
+        </ul>
+      </div>
     </header>
 
     <section>
-      <h2>Selected Work</h2>
+      <p>
+        I am a mathematics student at the University of Chicago, broadly interested in
+        mathematical research, scientific computing, and research engineering.
+      </p>
+
+      <p>
+        Recently, I have worked on computational topology software, biomedical theorem
+        proving, retrieval systems, and data analysis tools. I am especially interested
+        in projects where mathematical structure and software design meet.
+      </p>
+
+      <p>
+        I like thinking about algebraic topology, knot theory, combinatorics, machine
+        learning systems, and tools that make technical research easier to do.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Selected projects</h2>
+
+      <article>
+        <h3>Quantum topology software</h3>
+        <p>
+          Tools for computational problems in knot theory and PGL₂ web skein algebras,
+          developed during the UCLA Topology & Geometry REU.
+        </p>
+      </article>
 
       <article>
         <h3>BioPaper2Proof</h3>
@@ -71,15 +177,7 @@
       </article>
 
       <article>
-        <h3>Quantum Topology Software</h3>
-        <p>
-          Tools for computational problems in knot theory and PGL₂ web skein algebras,
-          developed during the UCLA Topology & Geometry REU.
-        </p>
-      </article>
-
-      <article>
-        <h3>GenAI and RAG Systems</h3>
+        <h3>GenAI and RAG systems</h3>
         <p>
           Built retrieval, summarization, clustering, and structured-output systems for
           webinar intelligence and content generation.
@@ -87,13 +185,21 @@
       </article>
     </section>
 
-    <section>
-      <h2>Research Interests</h2>
-      <p>
-        Algebraic topology, knot theory, combinatorics, scientific ML, theorem proving,
-        and computational tools for mathematical research.
-      </p>
+    <section id="writing">
+      <h2>Currently reading / thinking about</h2>
+
+      <ul>
+        <li>Algebraic topology and knot invariants</li>
+        <li>Graph limits and continuous combinatorics</li>
+        <li>Automated theorem proving for scientific text</li>
+        <li>Research engineering and mathematical software</li>
+      </ul>
     </section>
+
+    <footer>
+      <p>Last updated June 2026</p>
+    </footer>
   </main>
 </body>
 </html>
+```
