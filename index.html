@@ -1,3 +1,4 @@
+```html id="6dlf9x"
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,8 +70,12 @@
       padding-bottom: 4px;
     }
 
+    h3 {
+      margin-bottom: 4px;
+    }
+
     article {
-      margin: 24px 0;
+      margin: 28px 0;
     }
 
     ul {
@@ -88,6 +93,37 @@
 
     a:hover {
       text-decoration: underline;
+    }
+
+    .paper-title {
+      margin-bottom: 4px;
+    }
+
+    .paper-meta {
+      margin: 0 0 10px 0;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    details {
+      margin-top: 8px;
+    }
+
+    summary {
+      cursor: pointer;
+      color: #0645ad;
+    }
+
+    summary:hover {
+      text-decoration: underline;
+    }
+
+    .gallery-placeholder {
+      margin-top: 16px;
+      padding: 18px;
+      border: 1px dashed #ccc;
+      color: #666;
+      font-size: 0.95rem;
     }
 
     footer {
@@ -115,8 +151,8 @@
   <main>
     <nav>
       <a href="index.html">Parth Wokhlu</a>
-      <a href="#projects">Projects</a>
-      <a href="#writing">Writing</a>
+      <a href="#papers">Papers</a>
+      <a href="#for-fun">For fun</a>
       <a href="resume.pdf">CV</a>
     </nav>
 
@@ -144,25 +180,120 @@
       </p>
 
       <p>
-        I recently graduated from the University of Chicago with a B.S. in Mathematics. I'm currently interested in
-        low-dimensional topology, representation theory, and research engineering. In my free time, I enjoy making clothes, 
-        electronics projects, and reading. 
+        I recently graduated from the University of Chicago with a B.S. in Mathematics.
+        I'm currently interested in low-dimensional topology, representation theory,
+        and research engineering. In my free time, I enjoy making clothes, electronics
+        projects, and reading.
       </p>
     </section>
 
-    <section id="projects">
-      Coming soon!
+    <section id="papers">
+      <h2>Expository / research papers</h2>
+
+      <article class="paper">
+        <h3 class="paper-title">Threading of PGL<sub>2</sub>-webs</h3>
+        <p class="paper-meta">
+          Geometry and Topology REU at UCLA. With Vijay Higgins, Bryan Silva,
+          Amy Somers, David Stephens, and Parth Wokhlu. In preparation.
+        </p>
+
+        <details>
+          <summary>Abstract</summary>
+          <p>
+            Given a surface &Sigma;, one defines the Kauffman Bracket Skein Algebra
+            S<sub>q</sub> as formal q-linear combinations of link diagrams modulo the
+            Kauffman Bracket Skein relations. Multiplication is given by stacking
+            diagrams. Bonahon and Wong (2012) showed that there is a miraculous
+            threading homomorphism from S<sub>t</sub> to S<sub>q</sub> for specific
+            values of t and q.
+          </p>
+          <p>
+            Similar to the Kauffman Bracket Skein Algebra, one can also define a
+            PGL<sub>2</sub>-web skein algebra, and it is known that there sometimes
+            exists an injective homomorphism from the PGL<sub>2</sub>-web skein
+            algebra to the Kauffman Bracket Skein Algebra, for example in the case
+            of the three-punctured sphere. In those cases, the threading homomorphism
+            in the Kauffman Bracket Skein Algebra induces a homomorphism in the
+            PGL<sub>2</sub>-web skein algebra.
+          </p>
+          <p>
+            The threading operation is fairly simple to describe in the Kauffman
+            Bracket Skein Algebra, and the goal of the project was to find a similarly
+            simple description of the induced threading homomorphism in the
+            PGL<sub>2</sub>-web skein algebra. To this end, we computed the threading
+            of the algebra generators of the PGL<sub>2</sub>-web skein algebra on the
+            three-punctured sphere. We also consider the problem of threading
+            (a, b, c)-webs, which are a basis of the PGL<sub>2</sub>-web skein algebra
+            on the three-punctured sphere, and present some computational tools and
+            conjectures.
+          </p>
+        </details>
+      </article>
+
+      <article class="paper">
+        <h3 class="paper-title">
+          <a href="https://math.uchicago.edu/~may/REU2024/REUPapers/Wokhlu.pdf">
+            Construction of the Alexander Invariant
+          </a>
+        </h3>
+        <p class="paper-meta">
+          University of Chicago REU, mentored by Peter May and Irving Dai.
+        </p>
+
+        <details>
+          <summary>Abstract</summary>
+          <p>
+            This paper motivates and details the construction of the Alexander invariant,
+            a powerful invariant in knot theory. It assumes familiarity with algebraic
+            topology at the level of the fundamental group and homology theory.
+          </p>
+        </details>
+      </article>
+
+      <article class="paper">
+        <h3 class="paper-title">
+          <a href="https://math.uchicago.edu/~may/REU2023/REUPapers/Wokhlu.pdf">
+            Markov Chains and Musical Composition
+          </a>
+        </h3>
+        <p class="paper-meta">
+          University of Chicago REU, mentored by Philip Lo.
+        </p>
+
+        <details>
+          <summary>Abstract</summary>
+          <p>
+            This paper provides a brief overview of discrete Markov chains, particularly
+            concerning their long-time behavior, primarily following Greg Lawler's
+            <em>Introduction to Stochastic Processes</em>. It then studies applications
+            of this theory to stochastic music composition.
+          </p>
+        </details>
+      </article>
     </section>
 
-    <section id="writing">
-      <h2>Currently reading / thinking about</h2>
+    <section id="for-fun">
+      <h2>For fun</h2>
 
+      <h3>Currently reading</h3>
       <ul>
-        <li>Algebraic topology and knot invariants</li>
-        <li>Graph limits and continuous combinatorics</li>
-        <li>Automated theorem proving for scientific text</li>
-        <li>Research engineering and mathematical software</li>
+        <li>
+          <em>An Invitation to Algebraic Geometry</em>, by Karen E. Smith,
+          Lauri Kahanpää, Pekka Kekäläinen, and William Traves
+        </li>
+        <li>
+          <em>The Elements of Computing Systems</em> (aka NAND2Tetris),
+          by Noam Nisan and Shimon Schocken
+        </li>
+        <li>
+          <em>Discipline and Punish</em>, by Michel Foucault
+        </li>
       </ul>
+
+      <h3>Things I have made</h3>
+      <div class="gallery-placeholder">
+        Photo gallery coming soon.
+      </div>
     </section>
 
     <footer>
